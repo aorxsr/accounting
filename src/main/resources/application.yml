@@ -1,0 +1,27 @@
+
+server:
+  port: 9999
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: accounting
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;DatabaseName=accounting
+    username: sa
+    password: 1
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database: MySQL
+    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  # Thymeleaf
+  thymeleaf:
+    enabled: true
+    encoding: utf-8
+    prefix: classpath:/templates/
+    cache: false
+    mode: HTML
+    suffix: .html
